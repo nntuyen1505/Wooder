@@ -1,0 +1,102 @@
+// //nguyên khối lặp đi lặp lại và dùng đc nhiều lần
+// //Cách làm sẽ là bạn định nghĩa ra 1 class, rồi những tag nào cần thì @extend nó vào là xong
+.textbox {
+    --pdleft: 97px;
+    --pdright: 15px;
+    padding-left: var(--pdleft);
+    padding-right: var(--pdright);
+    // padding-top: 100px;
+    .titlemain {
+        @include text(40px, "pb", $line-height, $color, uppercase);
+        letter-spacing: 0.7px;
+        display: inline-flex;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '';
+            width: 82px;
+            height: 2px;
+            display: inline-block;
+            background-color: $gray-line;
+            top: 50%;
+            left: -96px;
+            // margin-left: 80px;
+            transform: translateY(-50%);
+        }
+        &.--yellow {
+            color: $yellow-cl;
+        }
+        &.--white {
+            color: $white-cl;
+        }
+        @include sm {
+            font-size: 30px;
+        }
+        @include xs {
+            font-size: 30px;
+        }
+    }
+    .description {
+        @include text(16px, "pr", $line-height, $text-des, normal);
+        padding: 13px 0 20px 0;
+        line-height: 26px;
+        &.--white {
+            color: $white-cl;
+        }
+        @include xs {
+            font-size: 15px;
+        }
+    }
+    @include sm {
+        --pdleft: 0px;
+        --pdright: 0px;
+        padding-left: var(--pdleft);
+        padding-right: var(--pdright);
+        padding-top: 20px;
+        .titlemain {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+.--textright {
+    text-align: right;
+    padding-left: var(--pdright);
+    padding-right: var(--pdleft);
+    .titlemain {
+        flex-direction: row-reverse;
+        &:before {
+            left: initial;
+            right: -100px;
+        }
+    }
+}
+
+.--textcenter {
+    max-width: 465px;
+    --pdleft: 0;
+    --pdright: 0;
+    padding-left: var(--pdleft);
+    padding-right: var(--pdright);
+    padding-top: 0;
+    text-align: center;
+    margin: 0 auto;
+    .titlemain {
+        display: flex;
+        flex-direction: column-reverse;
+        &:before {
+            top: initial;
+            bottom: -20px;
+            left: 50%;
+            @include transform(translate(-50%, -50%));
+            width: 37px;
+            height: 3px;
+            background-color: $yellow-cl;
+        }
+    }
+    .description {
+        margin: 30px auto;
+    }
+}

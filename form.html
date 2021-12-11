@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOODER</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <!-- meta facebook -->
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/font.css">
+    <link rel="stylesheet" href="dest/style.min.css">
+</head>
+
+<body>
+
+    <div class="header__menu">
+        <span class="btnmenu">
+        </span>
+    </div>
+    <div class="overlay_nav"></div>
+    <nav class="navtoggle">
+        <ul class="nav-menu">
+            <li><a href="">home</a></li>
+            <li><a href="">about </a></li>
+            <li><a href="">product</a></li>
+            <li><a href="">new</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <section class="form">
+            <h2>Form Contact</h2>
+            <form id="form">
+                <div class="form-group">
+                    <label>Ho ten</label>
+                    <input type="text" name="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" name="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>SDT</label>
+                    <input type="number" name="telephone" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Noi dung</label>
+                    <textarea name="content" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Tỉnh Thành</label>
+                    <select name="province" class="form-control">
+                        <option value="">Chọn tỉnh thành</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Huyện</label>
+                    <select name="town" class="form-control">
+                        <option value="">Chọn huyện</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Xã</label>
+                    <select name="ward" class="form-control">
+                        <option value="">Chọn xã</option>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <button type="button" class="btnContact">Lien He</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="input">
+            <h2>Input File</h2>
+            <div class="inputflie">
+                <span class="textflie"></span>
+                <input type="file" class="input">
+                <span class="btnflie">Chọn Flile</span>
+            </div>
+        </section>
+
+        <section class="accordion">
+            <h2>Accordion</h2>
+            <div class="accordion_item">
+                <div class="accordion_item-title">
+                    <span>Section 1</span>
+                    <div class="accordion-icon">
+                        <img src="img/arrow-point-to-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="accordion_item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio non ipsam velit earum ad commodi aspernatur at deserunt porro blanditiis laudantium cupiditate, tenetur ipsa soluta mollitia architecto iure illum officiis.
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_item-title">
+                    <span>Section 2</span>
+                    <div class="accordion-icon">
+                        <img src="img/arrow-point-to-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="accordion_item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio non ipsam velit earum ad commodi aspernatur at deserunt porro blanditiis laudantium cupiditate, tenetur ipsa soluta mollitia architecto iure illum officiis.
+                </div>
+            </div>
+            <div class="accordion_item">
+                <div class="accordion_item-title">
+                    <span>Section 3</span>
+                    <div class="accordion-icon">
+                        <img src="img/arrow-point-to-right.svg" alt="">
+                    </div>
+                </div>
+                <div class="accordion_item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio non ipsam velit earum ad commodi aspernatur at deserunt porro blanditiis laudantium cupiditate, tenetur ipsa soluta mollitia architecto iure illum officiis.
+                </div>
+            </div>
+        </section>
+
+        <section class="slider">
+            <div class="container">
+                <div class="carousel">
+                    <img class="carousel-cell" data-flickity-lazyload="img/flickity-1.jpg" alt="">
+                    <img class="carousel-cell" data-flickity-lazyload="img/flickity-2.jpg" alt="">
+                    <img class="carousel-cell" data-flickity-lazyload="img/WooderPSD1.jpg" alt="">
+                    <img class="carousel-cell" data-flickity-lazyload="img/flickity-1.jpg" alt="">
+                    <img class="carousel-cell" data-flickity-lazyload="img/flickity-2.jpg" alt="">
+                    <img class="carousel-cell" data-flickity-lazyload="img/WooderPSD1.jpg" alt="">
+                </div>
+                <span class="progress-text">Trượt Qua</span>
+                <div class="timeline">
+                    <div class="progress-bar"></div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+<script src="dest/jsmain.min.js"></script>
+<script src="dest/form.js"></script>
+<script src="dest/account.js"></script>
+
+</html>

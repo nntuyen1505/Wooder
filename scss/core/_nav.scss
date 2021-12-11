@@ -1,0 +1,42 @@
+.nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(54, 52, 52);
+    z-index: 100;
+    top: 0;
+    left: 0;
+    @include transform(translate(-100%));
+    @include transition($t);
+    ul {
+        position: absolute;
+        text-align: center;
+        @include mid;
+        li {
+            padding: 30px 0;
+            a {
+                @include text(20px, "pb", $line-height, $white-cl, uppercase);
+                @include transition($t);
+            }
+            &:hover {
+                a {
+                    color: $yellow-cl;
+                    @include transition($t);
+                }
+            }
+        }
+    }
+    &.menu__responsive {
+        // display: block;
+        @include visible($param: 1);
+        @include transform(translateX(0));
+        @include transition($t);
+    }
+    @include lg {
+        // display: none;
+        @include visible($param: 0);
+    }
+    @include sm {
+        // opacity: 1;
+    }
+}

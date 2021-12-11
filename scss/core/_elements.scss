@@ -1,0 +1,106 @@
+    //viết các nút button
+    .btnmain {
+        --fzbtman: 14px;
+        @include text(var(--fzbtmain), "pb", normal, $white-cl, uppercase);
+        letter-spacing: 2px;
+        display: inline-block;
+        border: 1px solid $white-cl;
+        padding: 20px 50px;
+        @include transition($t);
+        &:after {
+            display: inline-block;
+            content: '';
+            width: 30px;
+            height: 9px;
+            margin-left: 20px;
+            background-repeat: no-repeat;
+            background-image: url(../img/next-slider.png);
+            @include transition($t);
+            @include transform(translateX(0));
+        }
+        &:hover {
+            background-color: $yellow-cl;
+            @include transition($t);
+            &::after {
+                @include transform(translateX(10px));
+                @include transition($t);
+            }
+        }
+        @include sm {
+            padding: 15px 25px;
+        }
+        @include xs {
+            --fzbtmain: 13px;
+            padding: 15px 20px;
+            &:after {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    .btnmore {
+        @include text(14px, "pb", normal, $black-cl, uppercase);
+        letter-spacing: 2px;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        img {
+            width: 30px;
+            margin-left: 11px;
+            position: relative;
+            @include transition($t);
+            @include transform(translateX(0));
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 2px;
+            background-color: $yellow-cl;
+            bottom: -8px;
+            left: 0;
+        }
+        &:hover {
+            img {
+                @include transition($t);
+                @include transform(translateX(10px));
+            }
+            // background-color: $border-video;
+        }
+    }
+    
+    .btnvideo {
+        // position: relative;
+        color: $white-cl;
+        border: 1px solid white;
+        padding: 20px 50px;
+        display: flex;
+        align-items: center;
+        width: max-content;
+        @include transition($t);
+        &:before {
+            // position: absolute;
+            display: inline-block;
+            content: '';
+            background-image: url(../img/play-video.png);
+            width: 21px;
+            height: 21px;
+            margin-right: 15px;
+            // top: 50%;
+            // left: 56px;
+            // transform: translateY(-50%);
+            @include transition($t);
+            @include transform(translateX(0));
+        }
+        &:hover {
+            background-color: $yellow-cl;
+            @include transition($t);
+            &::before {
+                @include transition($t);
+                @include transform(translateX(-10px));
+            }
+        }
+        @include xs {
+            padding: 15px 20px;
+        }
+    }
