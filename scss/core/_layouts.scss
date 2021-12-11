@@ -23,6 +23,9 @@ body {
     background: $white-cl;
     scroll-behavior: smooth;
     position: relative;
+    .active {
+        overflow: hidden;
+    }
     @include customscroll();
     main {
         width: 100%;

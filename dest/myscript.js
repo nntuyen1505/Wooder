@@ -70,12 +70,15 @@ $(document).ready(function() {
 let btnMenu = document.querySelector('.btnmenu');
 let rotate = document.querySelector('.btnmenu');
 let nav = document.querySelector('.nav');
+let body = document.querySelector("body");
 
 btnMenu.addEventListener('click', function() {
 
     rotate.classList.toggle('new__rotate');
 
     nav.classList.toggle("menu__responsive");
+
+    body.classList.toggle('active');
 });
 
 window.addEventListener('resize', function() {
