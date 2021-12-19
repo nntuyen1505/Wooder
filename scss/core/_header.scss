@@ -118,7 +118,7 @@ header {
                     padding: 5px 0;
                 }
             }
-            &.active {
+            &.active_lang {
                 .lang__option {
                     @include visible(1);
                     display: block;

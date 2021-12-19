@@ -97,11 +97,11 @@ let langItem = document.querySelectorAll('.lang .lang__option a');
 
 lang.addEventListener('click', function(e) {
     e.stopPropagation();
-    lang.classList.toggle('active');
+    lang.classList.toggle('active_lang');
 });
 
 document.addEventListener('click', function() {
-    lang.classList.remove('active');
+    lang.classList.remove('active_lang');
 });
 
 langItem.forEach(function(item) {
